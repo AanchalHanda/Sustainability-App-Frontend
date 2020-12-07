@@ -29,6 +29,10 @@ public class MainActivity<set> extends AppCompatActivity {
                 {
                     Toast.makeText(MainActivity.this,"login successful",Toast.LENGTH_SHORT).show();
                 }
+                else if(emailcheck.getText().toString().equals("Janinder") && passwordcheck.getText().toString().equals("abc"))
+                {
+                    Toast.makeText(MainActivity.this,"login successful",Toast.LENGTH_SHORT).show();
+                }
                 else
                 {
                     Toast.makeText(MainActivity.this,"login failed",Toast.LENGTH_SHORT).show();

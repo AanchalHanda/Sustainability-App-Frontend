@@ -35,7 +35,7 @@
             android:drawableTint="#FFFFFF"
             android:ems="10"
             android:fadingEdge="none"
-            android:hint="email"
+            android:hint="Username"
             android:inputType="textPersonName"
             android:lineSpacingExtra="10sp"
             android:singleLine="true" />
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:ems="10"
-            android:hint="password"
+            android:hint="Password"
             android:inputType="textPassword" />
 
         <LinearLayout

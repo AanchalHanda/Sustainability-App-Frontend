@@ -2,6 +2,7 @@ package com.example.sustainability;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +11,9 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -32,6 +36,9 @@ public class MainActivity2 extends AppCompatActivity {
     private float[] yData = {25f,66f, 44f};
     private String[] xData = {"Neutral ", "Sustainable", "Negative"};
     private PieChart chart;
+    private ImageButton btnhome;
+    private ImageButton btnreport;
+    private ImageButton btnreward;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +47,26 @@ public class MainActivity2 extends AppCompatActivity {
         setTitle("Home");
         username = (TextView) findViewById(R.id.welcomehome);
         String user_email = getIntent().getStringExtra("username");
-        username.setText("Hi " + user_email + "!");
+        username.setText("Hi " + "Janinder" + "!");
             chart=(PieChart)findViewById(R.id.chart);
         setup_piechart();
+        btnhome=(ImageButton) findViewById(R.id.home_btn);
+        btnreward=(ImageButton) findViewById(R.id.rewards_btn);
+        btnreport=(ImageButton) findViewById(R.id.report_btn);
+        btnreport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity2.this,ReportActivity.class);
+                startActivity(i);
+            }
+        });
+        btnreward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity2.this,RewardActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void setup_piechart() {
@@ -66,6 +90,6 @@ public class MainActivity2 extends AppCompatActivity {
         chart.invalidate();
         Legend l=chart.getLegend();
         l.setEnabled(false);
-        chart. getDescription(). setEnabled(false);
+        chart. getDescription().setEnabled(false);
     }
 }

@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="green1">#0CD614</color>
+    <color name="green2">#7DE660</color>
+    <color name="green3">#B6ED7E</color>
+    <color name="yellow1">#e8ff4f</color>
+    <color name="red1">#F3FF1818</color>
+    <color name="bargreen">#40E413</color>
+
+    <color name="card1Start">#4D79FF</color>
+    <color name="card1End">#0039E6</color>
+    <color name="card2Start">#03CA35</color>
+    <color name="card2End">#01CA44</color>
+    <color name="howStart">#DF0CD4</color>
+    <color name="howEnd">#870681</color>
+
 </resources>
