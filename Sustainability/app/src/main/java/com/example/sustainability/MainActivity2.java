@@ -39,6 +39,7 @@ public class MainActivity2 extends AppCompatActivity {
     private ImageButton btnhome;
     private ImageButton btnreport;
     private ImageButton btnreward;
+    private ImageButton btnrecommendation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnhome=(ImageButton) findViewById(R.id.home_btn);
         btnreward=(ImageButton) findViewById(R.id.rewards_btn);
         btnreport=(ImageButton) findViewById(R.id.report_btn);
+        btnrecommendation=(ImageButton)findViewById(R.id.recommendation);
         btnreport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +66,13 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(MainActivity2.this,RewardActivity.class);
+                startActivity(i);
+            }
+        });
+        btnrecommendation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity2.this,MainActivity3.class);
                 startActivity(i);
             }
         });
