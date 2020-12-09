@@ -23,25 +23,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReportActivity extends AppCompatActivity {
-    float pointsDistribution[] = {38.7f, 28.3f, 10.2f, 22.8f};
-    String companies[] = {"Tesla", "Apple", "GM", "Amazon"};
-    int companyScores[] = { 92, 85, 65, 82};
+    float pointsDistribution[] = {38.7f, 10.2f, 28.3f, 22.8f};
+    String companies[] = {"Tesla", "Adidas", "Apple", "Amazon"};
+    int companyScores[] = { 94, 85, 91, 73};
     int monthly[] = {2678,3958,4215,1379,2579};
     String months[] = {"Aug","Sep","Oct","Nov","Dec"};
     private ImageButton btnhome;
     private ImageButton btnreport;
     private ImageButton btnreward;
+    private ImageButton btnreco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
+        //getActionBar().hide();
         setUpPieChart();
         setUpBarChart();
 
         btnhome=(ImageButton) findViewById(R.id.home_btn);
         btnreward=(ImageButton) findViewById(R.id.rewards_btn);
         btnreport=(ImageButton) findViewById(R.id.report_btn);
+        btnreco = (ImageButton) findViewById(R.id.recommendation_btn);
         btnhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +59,14 @@ public class ReportActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        btnreco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(ReportActivity.this,MainActivity3.class);
+                startActivity(i);
+            }
+        });
+
     }
 
 

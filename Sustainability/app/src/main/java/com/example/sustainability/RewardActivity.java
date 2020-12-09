@@ -14,6 +14,7 @@ public class RewardActivity extends AppCompatActivity implements View.OnClickLis
     private ImageButton btnhome;
     private ImageButton btnreport;
     private ImageButton btnreward;
+    private ImageButton btnreco;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class RewardActivity extends AppCompatActivity implements View.OnClickLis
         btnhome=(ImageButton) findViewById(R.id.home_btn);
         btnreward=(ImageButton) findViewById(R.id.rewards_btn);
         btnreport=(ImageButton) findViewById(R.id.report_btn);
+        btnreco=(ImageButton) findViewById(R.id.recommendation_btn);
         btnhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +41,13 @@ public class RewardActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(RewardActivity.this,ReportActivity.class);
+                startActivity(i);
+            }
+        });
+        btnreco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(RewardActivity.this,MainActivity3.class);
                 startActivity(i);
             }
         });

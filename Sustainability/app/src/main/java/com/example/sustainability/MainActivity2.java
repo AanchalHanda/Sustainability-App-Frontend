@@ -45,10 +45,10 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        setTitle("Home");
-        username = (TextView) findViewById(R.id.welcomehome);
+        //setTitle("Home");
+        username = (TextView) findViewById(R.id.textView19);
         String user_email = getIntent().getStringExtra("username");
-        username.setText("Hi " + "Janinder" + "!");
+        username.setText("Welcome home, Janinder!");
             chart=(PieChart)findViewById(R.id.chart);
         setup_piechart();
         btnhome=(ImageButton) findViewById(R.id.home_btn);

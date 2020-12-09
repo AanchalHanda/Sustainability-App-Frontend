@@ -11,31 +11,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="420dp"
+        android:layout_height="740dp"
+        android:layout_marginTop="84dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="-20dp">
-
-        <TextView
-            android:id="@+id/welcomehome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:text="TextView"
-            android:textColor="#131313"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-9dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
+            android:layout_marginLeft="20dp"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -61,10 +54,17 @@
 
             </LinearLayout>
 
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/chart"
-                android:layout_width="226dp"
-                android:layout_height="224dp"></com.github.mikephil.charting.charts.PieChart>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chart"
+                    android:layout_width="226dp"
+                    android:layout_height="224dp"></com.github.mikephil.charting.charts.PieChart>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -82,14 +82,15 @@
                 android:id="@+id/horizontaltransac"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
                 android:scrollbars="horizontal|vertical">
 
                 <TableLayout
                     android:id="@+id/transactiontable"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp">
 
                     <TableRow android:background="#2196F3">
 
@@ -118,7 +119,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="datetimestamp"
+                            android:text="Datetime Stamp"
                             android:textColor="@android:color/white"
                             android:textSize="14sp" />
 
@@ -137,9 +138,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="Aldi"
+                            android:text="Tesla"
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -147,7 +150,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="27000"
+                            android:text="$20,000"
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -155,8 +159,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="5sp"
-                            android:text="13/11/2019_22:04:24"
+                            android:text="03/12/2020_22:04:24"
 
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -164,7 +169,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="270"
+                            android:text="187"
+                            android:textColor="#000000"
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -175,7 +181,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="Aldi"
+                            android:text="Adidas"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -184,6 +192,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="28300"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -191,7 +201,8 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="5sp"
-                            android:text="13/11/2019_22:04:24"
+                            android:text="03/12/2020_22:01:22"
+                            android:textColor="#000000"
 
                             android:textSize="12sp" />
 
@@ -201,6 +212,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="283"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -211,7 +224,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="Aldi"
+                            android:text="Amazon"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -220,6 +235,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="23456"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -227,7 +244,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="5sp"
-                            android:text="13/11/2019_22:04:24"
+                            android:text="02/12/2020_02:04:21"
+
+                            android:textColor="#000000"
 
                             android:textSize="12sp" />
 
@@ -237,6 +256,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="292"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -247,7 +268,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="Aldi"
+                            android:text="Apple"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -256,6 +279,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="23456"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -263,8 +288,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="5sp"
-                            android:text="13/11/2019_22:04:24"
+                            android:text="02/12/2020_22:04:24"
 
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -273,6 +299,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="211"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -284,6 +312,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="Aldi"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -292,6 +322,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="23456"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -300,6 +332,8 @@
                             android:gravity="center_horizontal"
                             android:padding="5sp"
                             android:text="13/11/2019_22:04:24"
+
+                            android:textColor="#000000"
 
                             android:textSize="12sp" />
 
@@ -309,6 +343,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="54"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -319,7 +355,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="Aldi"
+                            android:text="Levis"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -328,6 +366,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="23456"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -336,6 +376,8 @@
                             android:gravity="center_horizontal"
                             android:padding="5sp"
                             android:text="13/11/2019_22:04:24"
+                            android:textColor="#000000"
+
 
                             android:textSize="12sp" />
 
@@ -345,6 +387,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="86"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -355,7 +399,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="Aldi"
+                            android:text="JD Sports"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -364,6 +410,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="23456"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -372,6 +420,7 @@
                             android:gravity="center_horizontal"
                             android:padding="5sp"
                             android:text="13/11/2019_22:04:24"
+                            android:textColor="#000000"
 
                             android:textSize="12sp" />
 
@@ -381,6 +430,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="151"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -391,7 +442,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
-                            android:text="Aldi"
+                            android:text="Flipkarrt"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -400,6 +453,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="23456"
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -409,6 +464,8 @@
                             android:padding="5sp"
                             android:text="13/11/2019_22:04:24"
 
+                            android:textColor="#000000"
+
                             android:textSize="12sp" />
 
                         <TextView
@@ -416,7 +473,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
+
                             android:text="132"
+                            android:textColor="#000000"
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -428,6 +487,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="Aldi"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -436,6 +497,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="23456"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -443,7 +506,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="5sp"
+
                             android:text="13/11/2019_22:04:24"
+                            android:textColor="#000000"
 
                             android:textSize="12sp" />
 
@@ -452,7 +517,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
+
                             android:text="1000"
+                            android:textColor="#000000"
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -464,6 +531,8 @@
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="Aldi"
+
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -471,7 +540,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
+
                             android:text="23456"
+                            android:textColor="#000000"
                             android:textSize="12sp" />
 
                         <TextView
@@ -479,7 +550,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="5sp"
+
                             android:text="13/11/2019_22:04:24"
+                            android:textColor="#000000"
 
                             android:textSize="12sp" />
 
@@ -488,7 +561,9 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
+
                             android:text="100"
+                            android:textColor="#000000"
                             android:textSize="12sp" />
                     </TableRow>
 
@@ -512,7 +587,7 @@
         android:background="#DAD6D6"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-19dp">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/rewards_btn"
@@ -542,5 +617,20 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/recommendation" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/roboto"
+        android:text="We"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

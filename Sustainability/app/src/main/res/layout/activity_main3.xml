@@ -6,9 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity3">
 
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
+        android:text="RECOMMENDATIONS"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
-        android:layout_width="403dp"
-        android:layout_height="674dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DAD6D6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="-19dp">
+
+        <ImageButton
+            android:id="@+id/rewards_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/reward" />
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/report_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/report" />
+
+        <ImageButton
+            android:id="@+id/recommendation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/recommendation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="743dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,21 +67,25 @@
 
         <TextView
             android:id="@+id/heading"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="24dp"
-            android:text="Recommendations:"
-            android:textColor="#040404"
-            android:textSize="30sp" />
+            android:fontFamily="@font/roboto"
+            android:text="Based on your previous transactions, we suggest"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/recomen2"
             android:layout_width="match_parent"
             android:layout_height="124dp"
 
-            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
 
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardCornerRadius="15dp"
             app:cardElevation="5dp"
@@ -43,8 +97,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="124dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:layout_marginBottom="20dp"
                 android:background="@color/teal_700">
 
@@ -54,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="80dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="CSR Score"
                     android:textColor="#F8F6F6"
                     android:textSize="12sp"
@@ -68,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="@font/roboto"
                     android:text="Tesco PLS
 "
                     android:textColor="#FFFFFF"
@@ -84,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="3dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="Based on your last Transaction with Aldi"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp"
@@ -94,14 +148,15 @@
                     tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/textView11c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="64dp"
                     android:layout_marginEnd="48dp"
+                    android:fontFamily="@font/roboto"
                     android:text="85"
-                    android:textColor="#FFFFFF"
 
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -114,10 +169,110 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
                     android:layout_marginTop="1dp"
+                    android:fontFamily="@font/roboto"
                     android:text="Supermarket/Retail"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2B" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recomen2c"
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+
+            android:layout_marginLeft="4dp"
+
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.514"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recomen1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="20dp"
+                android:background="#EC1F3D">
+
+                <TextView
+                    android:id="@+id/textView21c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="80dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="CSR Score"
+                    android:textColor="#F8F6F6"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView22c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Tradlands"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView2Bc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Based on your last Transaction with Levis"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22c"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="48dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="83"
+
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView13c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Fashion"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2Bc" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -138,9 +293,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="124dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:background="@color/purple_500">
 
                 <TextView
@@ -149,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="80dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="CSR Score"
                     android:textColor="#F8F6F6"
                     android:textSize="12sp"
@@ -163,7 +318,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="@font/roboto"
                     android:text="eBay Inc
 "
                     android:textColor="#FFFFFF"
@@ -178,7 +333,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="Based on your last Transaction with Amazon.com"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp"
@@ -193,9 +348,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="64dp"
                     android:layout_marginEnd="47dp"
+                    android:fontFamily="@font/roboto"
                     android:text="84"
-                    android:textColor="#FFFFFF"
 
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -208,6 +364,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
                     android:layout_marginTop="1dp"
+                    android:fontFamily="@font/roboto"
                     android:text="Online Shopping"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
@@ -233,8 +390,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="124dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:background="@color/teal_200">
 
                 <TextView
@@ -243,7 +400,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="80dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="CSR Score"
                     android:textColor="#F8F6F6"
                     android:textSize="12sp"
@@ -257,7 +414,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="@font/roboto"
                     android:text="Next PLC
 "
                     android:textColor="#FFFFFF"
@@ -273,7 +430,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="2dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="Based on your last Transaction with JD Sports Fashion"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp"
@@ -288,9 +445,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="64dp"
                     android:layout_marginEnd="47dp"
+                    android:fontFamily="@font/roboto"
                     android:text="90"
-                    android:textColor="#FFFFFF"
 
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -303,6 +461,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
                     android:layout_marginTop="1dp"
+                    android:fontFamily="@font/roboto"
                     android:text="Fashion"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
@@ -328,8 +487,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="124dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/card1Start">
 
@@ -339,7 +498,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="80dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="CSR Score"
                     android:textColor="#F8F6F6"
                     android:textSize="12sp"
@@ -353,7 +512,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
+                    android:fontFamily="@font/roboto"
                     android:text="WMM SuperMarket "
                     android:textColor="#FFFFFF"
                     android:textSize="24sp"
@@ -368,7 +527,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="2dp"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/roboto_light"
                     android:text="Based on your last Transaction with idl Gmb Co."
                     android:textColor="#FFFFFF"
                     android:textSize="12sp"
@@ -383,10 +542,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="64dp"
                     android:layout_marginEnd="48dp"
+                    android:fontFamily="@font/roboto"
                     android:text="82"
                     android:textColor="#FFFFFF"
-                    android:textSize="18sp"
 
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -398,6 +558,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="19dp"
                     android:layout_marginTop="1dp"
+                    android:fontFamily="@font/roboto"
                     android:text="Supermarket/Retail"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
@@ -405,43 +566,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:background="#DAD6D6"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="-19dp">
-
-            <ImageButton
-                android:id="@+id/rewards_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/reward" />
-
-            <ImageButton
-                android:id="@+id/home_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/home" />
-
-            <ImageButton
-                android:id="@+id/report_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/report" />
-
-            <ImageButton
-                android:id="@+id/recommendation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/recommendation" />
-        </LinearLayout>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
